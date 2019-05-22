@@ -423,7 +423,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #800040
+			background-color: #222833
 		}
 
 		input[type="submit"].fit,
@@ -439,6 +439,7 @@
 		.button.small {
 			font-size: 0.8em;
 		}
+
 
 /* Wrapper */
 
@@ -662,5 +663,5 @@
 				height: 150px;
 				margin-right: 20px;
 				border-radius:10px;
-				
+
 		}
