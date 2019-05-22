@@ -405,7 +405,7 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background: #3ac984;
+		background: #e69900;
 		border-radius: 40px;
 		border: 0;
 		color: white;
@@ -423,7 +423,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #32b777;
+			background-color: #800040
 		}
 
 		input[type="submit"].fit,
@@ -501,7 +501,7 @@
 	}
 
 	#logo {
-		font-size: 2em;
+		font-size: 4em;
 	}
 
 	#nav > ul {
