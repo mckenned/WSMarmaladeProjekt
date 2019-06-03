@@ -13,7 +13,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #555555;
+		color: #FFF;
 		font-family: 'Raleway', sans-serif;
 		font-size: 13pt;
 		font-weight: 300;
@@ -443,7 +443,7 @@
 /* Wrapper */
 
 	.wrapper.style1 {
-		background: #fff;
+		background: #202020;
 	}
 
 	.wrapper.style2 {
@@ -719,4 +719,4 @@
 			top: -40px;
 			width: 289px;
 			vertical-align: middle;
-		}		
+		}
