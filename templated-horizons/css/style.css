@@ -13,11 +13,14 @@
 	}
 
 	body, input, select, textarea {
-		color: #555555;
+		color: #FFF;
 		font-family: 'Raleway', sans-serif;
 		font-size: 13pt;
 		font-weight: 300;
 		line-height: 1.75em;
+	}
+	textarea {
+		margin-left: 20px;
 	}
 
 	a {
@@ -443,7 +446,7 @@
 /* Wrapper */
 
 	.wrapper.style1 {
-		background: #fff;
+		background:  	#202020;
 	}
 
 	.wrapper.style2 {
@@ -659,7 +662,7 @@
 		#fruits {
 				float: left;
 				with: 50px;
-				height: 200px;
+				height: 150px;
 				margin-right: 20px;
 				border-radius:10px;
 				margin-bottom: 30px;
@@ -668,7 +671,7 @@
 		#spices {
 				float: left;
 				with: 50px;
-				height: 200px;
+				height: 150px;
 				margin-right: 20px;
 				border-radius:10px;
 				margin-bottom: 30px;
