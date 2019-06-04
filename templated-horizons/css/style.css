@@ -13,7 +13,7 @@
 	}
 
 	body, input, select, textarea {
-		color: #555555;
+		color: #FFF;
 		font-family: 'Raleway', sans-serif;
 		font-size: 13pt;
 		font-weight: 300;
@@ -241,7 +241,6 @@
 			ul.default li {
 				display: block;
 				padding: 0.60em 0;
-				border-top: 1px solid;
 				border-color: rgba(192, 192, 192, 0.15);
 			}
 
@@ -405,7 +404,7 @@
 		-o-transition: background-color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out;
-		background: #3ac984;
+		background: #e69900;
 		border-radius: 40px;
 		border: 0;
 		color: white;
@@ -423,7 +422,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background-color: #32b777;
+			background-color: #222833
 		}
 
 		input[type="submit"].fit,
@@ -440,10 +439,11 @@
 			font-size: 0.8em;
 		}
 
+
 /* Wrapper */
 
 	.wrapper.style1 {
-		background: #fff;
+		background: #202020;
 	}
 
 	.wrapper.style2 {
@@ -471,12 +471,12 @@
 /* Header */
 
 	#header {
-		background: #333333 url("../images/pic01.jpg") no-repeat;
+		background: #333333 url("../images/pic05.jpg") no-repeat;
 		background-size: cover;
 		color: #fff;
 		padding: 6em 0;
 		text-align: center;
-		background-position: 0% 65%;
+		background-position: 0% 20%;
 		position: relative;
 	}
 
@@ -501,7 +501,7 @@
 	}
 
 	#logo {
-		font-size: 2em;
+		font-size: 4em;
 	}
 
 	#nav > ul {
@@ -588,7 +588,7 @@
 			line-height: 1.6em;
 			font-size: 1.5em;
 		}
-		
+
 		#banner a {
 			color: inherit;
 		}
@@ -654,4 +654,69 @@
 
 		#footer a {
 			color: inherit;
+		}
+
+		#fruits {
+				float: left;
+				with: 50px;
+				height: 200px;
+				margin-right: 20px;
+				border-radius:10px;
+				margin-bottom: 30px;
+
+		}
+		#spices {
+				float: left;
+				with: 50px;
+				height: 200px;
+				margin-right: 20px;
+				border-radius:10px;
+				margin-bottom: 30px;
+		}
+		.photo-grid {
+			margin: 1em auto;
+			max-width: 1106px;
+			text-align: center;
+		}
+
+		.photo-grid li {
+			border: 5px solid white;
+			display: inline-block;
+			margin: 1em;
+			width: 289px;
+		}
+
+		.photo-grid img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
+
+		.photo-grid figure {
+			height: 163px;
+			overflow: hidden;
+			position: relative;
+			width: 289px;
+		}
+
+		.photo-grid figcaption {
+			background: rgba(0,0,0,0.8);
+			color: white;
+			display: table;
+			height: 100%;
+			left: 0;
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 100;
+		}
+
+		.photo-grid figcaption p {
+			display: table-cell;
+			font-size: 1.5em;
+			position: relative;
+			top: -40px;
+			width: 289px;
+			vertical-align: middle;
 		}
