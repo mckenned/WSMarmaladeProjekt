@@ -696,7 +696,7 @@
 		#pears{}
 		#pomegranate{}
 		#rhubarb{}
-		
+
 		.spices {
 			float: left;
 			with: 50px;
@@ -721,3 +721,9 @@
 		#coconutflakes{}
 		#lemonzest{}
 		#vanilla{}
+
+			label {
+			 padding:10px;
+			 margin:0 0 10px;
+			 display:block;
+			}
