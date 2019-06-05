@@ -722,8 +722,13 @@
 		#lemonzest{}
 		#vanilla{}
 
+/* Label for checkbox */
 			label {
-			 padding:10px;
-			 margin:0 0 10px;
-			 display:block;
+			
+			 position:relative;
+			 bottom: 25px;
 			}
+			label:hover {
+				font-size: 1.5em;
+ 				cursor:pointer;
+}
