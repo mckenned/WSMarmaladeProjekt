@@ -88,6 +88,10 @@
 	section.special, article.special {
 		text-align: center;
 	}
+	.section1 {
+		background-color: #2F4F4F;
+		padding: 40px
+	}
 
 	header.major {
 		padding-bottom: 4em;
@@ -468,6 +472,10 @@
 			float: right;
 		}
 
+		.wrapper.style4 {
+			background-image: url('../images/Holzbrett.jpg')
+		}
+
 /* Header */
 
 	#header {
@@ -724,7 +732,7 @@
 
 /* Label for checkbox */
 			label {
-			
+
 			 position:relative;
 			 bottom: 25px;
 			}
