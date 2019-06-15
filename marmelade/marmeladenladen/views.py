@@ -28,6 +28,9 @@ class MyView(View):
         }
         return render(request, 'index_b.html', context=context)
 
+def start(request):
+    return render(request, 'Frontpage.html')
+
 def index(request):
     # Get every tupel with certain name and change the QuerySet into a Dictionary
 

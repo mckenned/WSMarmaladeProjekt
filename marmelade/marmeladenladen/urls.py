@@ -6,6 +6,7 @@ from marmeladenladen.views import MyView
 urlpatterns = [
     path('', views.index, name='index'),
     path('about/', MyView.as_view()),
+    path('start/', views.start, name='start'),
     #path('generator', views.generator.as_view(), name='ingredients_list')
 ]
 urlpatterns += staticfiles_urlpatterns()
