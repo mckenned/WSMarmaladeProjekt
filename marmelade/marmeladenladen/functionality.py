@@ -1,0 +1,91 @@
+from django.db.models import Q
+from marmeladenladen.models import Ingredients
+
+def prepare_queryset(request):
+    myinput = request.POST.getlist('decision') #get the received data as a list
+    myinput_length = len(myinput)   #initialize a variable with the length of myinput
+    print(myinput_length)   #console print of myinput_length
+
+
+    #get the queryset from database depending on the length of myinput
+    if myinput_length == 4:
+        queryset = Ingredients.object.filter(Q(id = myinput[0]) | Q(id = myinput[1]) | Q(id = myinput[2]) | Q(id = myinput[3])).values()
+    elif myinput_length == 3:
+        queryset = Ingredients.object.filter(Q(id = myinput[0]) | Q(id = myinput[1]) | Q(id = myinput[2])).values()
+    elif myinput_length == 2:
+        queryset = Ingredients.object.filter(Q(id = myinput[0]) | Q(id = myinput[1])).values()
+    elif myinput_length == 1:
+        queryset = Ingredients.object.filter(id = myinput[0]).values()
+
+    return queryset, myinput
+
+def prepare_fruits(queryset, myinput):
+    #filter queryset depending on type
+    fruit_queryset = queryset.filter(Type= 'Fruit')
+
+    # get fruits for context variable
+    # depending on myinput_length set possible placeholder data for template
+    number_fruits = len(fruit_queryset)
+    if len(fruit_queryset) == 1:
+        fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
+        name_fruit1 = fruit1["Name"].lower()
+        name_fruit2 = 'banana'
+        name_fruit3 = 'strawberries'
+
+    if len(fruit_queryset) == 2:
+        fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
+        fruit2 = fruit_queryset.filter(id = myinput[1]).values()[0]
+        name_fruit1 = fruit1["Name"].lower()
+        name_fruit2 = fruit2["Name"].lower()
+        name_fruit3 = 'banana'
+
+    if len(fruit_queryset) == 3:
+        fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
+        fruit2 = fruit_queryset.filter(id = myinput[1]).values()[0]
+        fruit3 = fruit_queryset.filter(id = myinput[2]).values()[0]
+        name_fruit1 = fruit1["Name"].lower()
+        name_fruit2 = fruit2["Name"].lower()
+        name_fruit3 = fruit3["Name"].lower()
+
+    if len(fruit_queryset) > 3:
+        fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
+        fruit2 = fruit_queryset.filter(id = myinput[1]).values()[0]
+        fruit3 = fruit_queryset.filter(id = myinput[2]).values()[0]
+        name_fruit1 = fruit1["Name"].lower()
+        name_fruit2 = fruit2["Name"].lower()
+        name_fruit3 = fruit3["Name"].lower()
+
+    # set context variable aka dictionary, which will be used for filling the template
+    fruits = {
+        'name_fruit1': name_fruit1,
+        'name_fruit2': name_fruit2,
+        'name_fruit3': name_fruit3,
+    }
+
+    return fruits
+
+def prepare_spices(queryset):
+    #filter queryset depending on type
+    spice_queryset = queryset.filter(Type='Spice')
+
+    #if spice is definded, set into name_spice for context variable
+    if len(spice_queryset) == 1:
+        spice = spice_queryset.values()[0]
+        name_spice = spice["Name"].lower()
+    else: name_spice = 'honey'  #if no spice is received set an placeholder with 'honey'
+
+    return name_spice
+
+def prepare_message(queryset):
+
+    myinput_length = len(queryset)
+
+    #denpending on myinput_length set a message for the user
+    if myinput_length < 4:
+        message = 'For a great experience and rich taste we added some ingredients'
+    elif myinput_length > 4:
+        message = 'Unfortunately we could only use 4 ingredients'
+    else:
+        message = 'Great! Here is your special recipe.'
+
+    return message

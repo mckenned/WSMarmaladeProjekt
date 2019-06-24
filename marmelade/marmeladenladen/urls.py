@@ -5,9 +5,9 @@ from marmeladenladen.views import Recipe, SelectionView
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
-    path('fruitbasket/', views.fruitbasket, name='fruitbasket'),
+    path('test/', views.fruitbasket, name='test'),
     path('recipe/', Recipe.as_view()),
     path('', views.index, name='index'),
-    path('test/', SelectionView.as_view()),
+    path('fruitbasket/', SelectionView.as_view(), name='fruitbasket'),
 ]
 urlpatterns += staticfiles_urlpatterns()
