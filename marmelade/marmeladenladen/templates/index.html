@@ -11,14 +11,15 @@
 		</section>
 	</div>
 				<!--<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span> -->
-
+	<div class="container">
+	<form action="" method="post">
+	{% csrf_token %}
 	<div class="container">
 		<div class="row">
 
 			<section class="3u">
 				<ul class="default">
-					<form action="" method="post">
-					{% csrf_token %}
+
 					<li><img id="apple" src="{%static 'images/apple.jpg' %}" class="fruits" >
 						<label for="id_chkboxApple"><input name="decision" type="checkbox" id ="decision" value='5'></input>Apple</label></li>
 					<li><img id="blueberries" src="{%static 'images/blueberries1.png' %}" class="fruits" >
@@ -98,7 +99,7 @@
 	<div id="content" class="8u skel-cell-important">
 		<section>
 			<header class="major">
-				<h3 style="text-indent:150px";>2. Choose the spices for your home-made marmalade</h3>
+				<h3 style="text-indent:0px";>2. Choose the spices for your home-made marmalade</h3>
 			</header>
 		</section>
 	</div>
@@ -147,11 +148,12 @@
 					<li><img id="coconut flakes" src="{%static 'images/spices/coconut flakes.jpg' %}" class="spices" ></li>
 					<li><img id="lemon zest" src="{%static 'images/spices/lemon zest.jpg' %}" class="spices" ></li>
 					<li><img id="vanilla" src="{%static 'images/spices/vanilla.jpg' %}" class="spices" ></li>
-					<<button type="submit" name="button">Absenden</button>
-					</form>
 				</ul>
 			</section>
 		</div>
+	</div>
+	<input type="submit" name="button" value='Submit'></input>
+	</form>
 	</div>
 	<div id="content" class="8u skel-cell-important">
 		<section>

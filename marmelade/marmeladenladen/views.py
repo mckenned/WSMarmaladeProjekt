@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponse
 from django.views import View
 from django.views import generic
 from django.views.generic.edit import FormView
+from django.db.models import Q
 
 from marmeladenladen.forms import SelectionForm
 from marmeladenladen.models import Ingredients
@@ -36,7 +37,7 @@ class Recipe(View):
 Here starts the real magic:
 Tadaaaa! Our incredible view to select our options
 URL:            /fruitbasket/
-Function GET:   Setting up the form for use. Simple as that.
+Function GET:   Setting up the form for use. In this view you choose your ingredients and submit them. Simple as that.
 Function POST:  Sending the userinput to the server without saving the data into a database (performance).
                 We fetch the input from the request und set it into a list.
                 From here on we use this list and the database "Ingredients" to refine the data for our context variable.
