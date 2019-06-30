@@ -64,7 +64,16 @@ class SelectionView(FormView):
             context['message'] = prepare_message(queryset)
             context['form'] = form
 
-        else: print('Fail! Your form is not valid.')
+        else:
+            print('Fail! Your form is not valid.')
+            context = {
+                'name_fruit1': 'banana',
+                'name_fruit2': 'apple',
+                'name_fruit3': 'strawberry',
+                'name_spice': 'honey',
+                'message': 'Unfortunately you did not choose any fruits. Here is a sample. Try again to make your own recipe or just try this one.',
+            }
+            return render(request, 'recipeGenerator.html', context=context)
 
         '''
         render the website with following data:
