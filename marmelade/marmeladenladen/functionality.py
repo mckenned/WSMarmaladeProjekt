@@ -29,7 +29,7 @@ def prepare_fruits(queryset, myinput):
     if len(fruit_queryset) == 1:
         fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
         name_fruit1 = fruit1["Name"].lower()
-        name_fruit2 = 'banana'
+        name_fruit2 = 'cherries'
         name_fruit3 = 'strawberries'
 
     if len(fruit_queryset) == 2:
@@ -37,7 +37,7 @@ def prepare_fruits(queryset, myinput):
         fruit2 = fruit_queryset.filter(id = myinput[1]).values()[0]
         name_fruit1 = fruit1["Name"].lower()
         name_fruit2 = fruit2["Name"].lower()
-        name_fruit3 = 'banana'
+        name_fruit3 = 'cherries'
 
     if len(fruit_queryset) == 3:
         fruit1 = fruit_queryset.filter(id = myinput[0]).values()[0]
@@ -69,10 +69,10 @@ def prepare_spices(queryset):
     spice_queryset = queryset.filter(Type='Spice')
 
     #if spice is definded, set into name_spice for context variable
-    if len(spice_queryset) == 1:
+    if len(spice_queryset) >= 1:
         spice = spice_queryset.values()[0]
         name_spice = spice["Name"].lower()
-    else: name_spice = 'honey'  #if no spice is received set an placeholder with 'honey'
+    else: name_spice = 'sugar'  #if no spice is received set an placeholder with 'honey'
 
     return name_spice
 
@@ -84,7 +84,7 @@ def prepare_message(queryset):
     if myinput_length < 4:
         message = 'For a great experience and rich taste we added some ingredients'
     elif myinput_length > 4:
-        message = 'Unfortunately we could only use 4 ingredients'
+        message = 'Unfortunately we could only use 4 ingredients. Therefor we have choosen your first three fruits and one spice.'
     else:
         message = 'Great! Here is your special recipe.'
 
