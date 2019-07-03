@@ -57,8 +57,8 @@ class SelectionView(FormView):
         if form.is_valid(): #django forms are with built-in validation
             text1 = form.cleaned_data['decision']
             print(text1)
-
-            queryset, myinput = prepare_queryset(request)
+            myinput = request.POST.getlist('decision') #get the received data as a list
+            queryset = prepare_queryset(myinput)
             context = prepare_fruits(queryset, myinput)
             context['name_spice'] = prepare_spices(queryset)
             context['message'] = prepare_message(queryset)
