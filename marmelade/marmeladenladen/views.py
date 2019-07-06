@@ -113,3 +113,10 @@ URL:    '/test/'
 
 def fruitbasket(request):
     return render(request, 'index.html')
+
+'''
+Shows the SIte Notices
+URL:    '/sitenotice/'
+'''
+def sitenotice(request):
+    return render(request, 'SiteNotice.html')
