@@ -88,6 +88,10 @@
 	section.special, article.special {
 		text-align: center;
 	}
+	.section1 {
+		padding: 40px;
+		background-color: inherit;
+	}
 
 	header.major {
 		padding-bottom: 4em;
@@ -468,7 +472,14 @@
 			float: right;
 		}
 
-/* Header */
+		.wrapper.style4 {
+			background-image: url('../images/Holzbrett.jpg')
+		}
+
+			.wrapper.style5 {
+				background-image: url('../images/Recipebook.jpg')
+			}
+	/* Header */
 
 	#header {
 		background: #333333 url("../images/pic05.jpg") no-repeat;
@@ -513,10 +524,10 @@
 			display: inline-block;
 			margin-left: 0.5em;
 			padding: 0.5em 1.5em;
+			color: #202020;
 		}
 
 			#nav > ul > li a {
-				color: #FFF;
 				text-decoration: none;
 				font-size: 1.2em;
 			}
@@ -724,7 +735,7 @@
 
 /* Label for checkbox */
 			label {
-			
+
 			 position:relative;
 			 bottom: 25px;
 			}

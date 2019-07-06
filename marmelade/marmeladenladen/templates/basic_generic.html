@@ -33,11 +33,8 @@
 							{%block createyourownrecipe %}
 							<li><a href="{% url 'fruitbasket' %}">Create Your Own Recipe</a></li>
 							{% endblock %}
-							{%block GoodToKnow %}
-							<li><a href="GoodToKnow.html">Good To Know</a></li>
-							{% endblock %}
 							{%block SiteNotice %}
-							<li><a href="SiteNotice.html">Site Notice</a></li>
+							<li><a href="{% url 'sitenotice' %}">Site Notice</a></li>
 							{%endblock%}
 						</ul>
 					</nav>

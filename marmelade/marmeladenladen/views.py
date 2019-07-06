@@ -103,9 +103,6 @@ URL:    ''
 def index(request):
     return render(request, 'Frontpage.html')
 
-
-
-
 '''
 Testing the template and static files
 URL:    '/test/'
