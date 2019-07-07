@@ -1,0 +1,46 @@
+{% extends "basic_generic.html" %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+											<div class="container1">
+												<div class="row">
+
+													<!-- Sidebar -->
+													<div id="sidebar" class="4u sidebar">
+														<section class = "section1">
+																<h2>Ingredients:</h2>
+																	<ul class="default" data-cy="ingredientsFruit">
+																		<li>500g {{name_fruit1}}</li>
+																		<li>500g {{name_fruit2}}</li>
+																		<li>500g {{name_fruit3}}</li>
+																		<li>500g Jam sugar</li>
+																	</ul>
+														</section>
+														<section class ="section1">
+																<h2>Spices</h2>
+															<ul class="default" data-cy="ingredientsSpice">
+																<li>{{name_spice}}</li>
+
+															</ul>
+														</section>
+													</div>
+
+													<!-- Content -->
+													<div id="content" class="8u skel-cell-important" data-cy="recipeText">
+														<section class="section1">
+																<h2>Your recipe</h2>
+																<span class="byline">{{message}}</span>
+															<p>Wash and dice the {{name_fruit1}}, {{name_fruit2}} and {{name_fruit3}}. Place it in a large pot. Then mix the jam sugar (1:3) into the pot. Cover with a cotton dish towel and let sit for 2 hours.
+															Meanwhile, rinse the jars and lids thoroughly with hot water and lay them out for filling.</p>
+															<p>After 2 hours, stir the fruit-sugar mixture well and place it the stove. Bring it to the boil for about 3 minutes, stirring occasionally. Then lower the temperature and add {{name_spice}} to taste. Stir well again.
+															Carefully fill the first jar with a ladle and a filling funnel, then immediately close it and place it upsidedown on a cloth. Repeat this with the other jars until all of the jam has been distributed to jars.</p>
+															<p>After the glasses have cooled down slightly, place them right side up again to coll completely.
+															Store the finished jam in a cool, dark place for up to a year.</p>
+														</section>
+													</div>
+
+												</div>
+											</div>
+							</div>
+  {%endblock%}

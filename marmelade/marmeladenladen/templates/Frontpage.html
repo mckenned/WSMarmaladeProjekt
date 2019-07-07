@@ -1,0 +1,20 @@
+{% extends "basic_generic.html" %}
+{% load static from staticfiles %}
+{% block content %}
+<div id="banner">
+	<div class="container1">
+		<div class="container">
+			<section>
+			<header class="major">
+				<h2>DIY</h2>
+				<span class="byline">This blog was created to support everyone in enjoying their own home-made marmalade. If you love to start in the day with some bread and jam, you found the right page</span>
+			</header>
+			<a href="{% url 'fruitbasket' %}" class="button alt"
+			data-cy="createYourRecipeButton">Create your own recipe</a>
+		</section>
+	</div>
+	</div>
+</div>
+
+
+{% endblock %}

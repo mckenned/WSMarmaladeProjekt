@@ -21,7 +21,7 @@
 	}
 
 	a {
-		color: #fff;
+		color: #3ac984;
 		text-decoration: underline;
 	}
 
@@ -89,8 +89,8 @@
 		text-align: center;
 	}
 	.section1 {
-		background-color: #2F4F4F;
-		padding: 40px
+		padding: 40px;
+		background-color: inherit;
 	}
 
 	header.major {
@@ -476,7 +476,10 @@
 			background-image: url('../images/Holzbrett.jpg')
 		}
 
-/* Header */
+			.wrapper.style5 {
+				background-image: url('../images/Recipebook.jpg')
+			}
+	/* Header */
 
 	#header {
 		background: #333333 url("../images/pic05.jpg") no-repeat;
@@ -521,10 +524,10 @@
 			display: inline-block;
 			margin-left: 0.5em;
 			padding: 0.5em 1.5em;
+			color: #202020;
 		}
 
 			#nav > ul > li a {
-				color: #FFF;
 				text-decoration: none;
 				font-size: 1.2em;
 			}
@@ -538,7 +541,7 @@
 			}
 
 			#nav > ul > li.active {
-				background: #fff;
+				background: #3ac984;
 			}
 
 				#nav > ul > li.active a {
@@ -672,26 +675,26 @@
 				border-radius:10px;
 				margin-bottom: 30px;
 		}
-		#strawberryS{}
+		#strawberries{}
 		#peach{}
-		#orange{}
+		#oranges{}
 		#apple{}
-		#apricot{}
+		#aprikose{}
 		#bananas{}
-		#blackberry{}
-		#cherry{}
+		#blackberries{}
+		#cherries{}
 		#plums{}
 		#raspberry{}
 		#pineapple{}
-		#blueberry{}
+		#blueberries{}
 		#redcurrant{}
 		#cranberry{}
 		#date{}
 		#fig{}
-		#gooseberry{}
+		#gooseberries{}
 		#grapefruit{}
 		#guava{}
-		#grape{}
+		#grapes{}
 		#johannisberry{}
 		#papaya{}
 		#passionfruit{}
@@ -725,7 +728,7 @@
 		#cocoa{}
 		#honey{}
 		#rosemary{}
-		#pepper{}
+		#chiliflakes{}
 		#coconutflakes{}
 		#lemonzest{}
 		#vanilla{}

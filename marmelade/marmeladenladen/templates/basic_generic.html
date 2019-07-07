@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static from staticfiles%}
+<html>
+<head>
+  {% block title %}<title>Home</title>{% endblock %}
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<!--[if lte IE 8]><script src='{% static "css/ie/html5shiv.js"></script><![endif]-->
+  <script type="text/javascript" language="Javascript" src="{% static 'js/jquery.min.js' %}"></script>
+  <script type="text/javascript" language="Javascript" src="{% static 'js/jquery.dropotron.min.js' %}"></script>
+  <script type="text/javascript" language="Javascript" src="{% static 'js/skel.min.js' %}"></script>
+  <script type="text/javascript" language="Javascript" src="{% static 'js/skel-layers.min.js' %}"></script>
+  <script type="text/javascript" language="Javascript" src="{% static 'js/init.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/skel.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+</head>
+<body class="createyourownrecipe">
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+
+				<!-- Logo -->
+					<h1><a href="{% url 'index' %}" id="logo">Home-Made Marmalade</a></h1>
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							{%block frontpage %}
+							<li><a href="{% url 'index' %}">Home</a></li>
+							{% endblock %}
+							{%block createyourownrecipe %}
+							<li><a href="{% url 'fruitbasket' %}">Create Your Own Recipe</a></li>
+							{% endblock %}
+							{%block SiteNotice %}
+							<li><a href="{% url 'sitenotice' %}">Site Notice</a></li>
+							{%endblock%}
+						</ul>
+					</nav>
+				</div>
+			</div>
+		<!-- Content-->
+      <div id="main" class="wrapper style1">{% block content %}{% endblock %}</div>
+
+
+						<!-- Copyright -->
+							<div class="copyright">
+								Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+							</div>
+              <div class = "copyright">
+  							Project by: Universität Leipzig, B.Sc. Business Information Systems
+  						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
