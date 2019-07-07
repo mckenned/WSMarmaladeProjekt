@@ -22,9 +22,9 @@ class Recipe(View):
     def get(self, request):
 
         context = {
-            'name_fruit1': 'banana',
-            'name_fruit2': 'apple',
-            'name_fruit3': 'strawberry',
+            'name_fruit1': 'bananas',
+            'name_fruit2': 'apples',
+            'name_fruit3': 'strawberries',
             'name_spice': 'honey',
             'message': 'This is a sample. Try to make your own recipe or just try this one.',
         }
@@ -67,9 +67,9 @@ class SelectionView(FormView):
         else:
             print('Fail! Your form is not valid.')
             context = {
-                'name_fruit1': 'banana',
-                'name_fruit2': 'apple',
-                'name_fruit3': 'strawberry',
+                'name_fruit1': 'bananas',
+                'name_fruit2': 'apples',
+                'name_fruit3': 'strawberries',
                 'name_spice': 'honey',
                 'message': 'Unfortunately you did not choose any fruits. Here is a sample. Try again to make your own recipe or just try this one.',
             }

@@ -8,10 +8,10 @@
 												<div class="row">
 
 													<!-- Sidebar -->
-													<div id="sidebar" class="4u sidebar" name="ingredientsList">
+													<div id="sidebar" class="4u sidebar">
 														<section class = "section1">
 																<h2>Ingredients:</h2>
-																	<ul class="default">
+																	<ul class="default" data-cy="ingredientsFruit">
 																		<li>500g {{name_fruit1}}</li>
 																		<li>500g {{name_fruit2}}</li>
 																		<li>500g {{name_fruit3}}</li>
@@ -20,7 +20,7 @@
 														</section>
 														<section class ="section1">
 																<h2>Spices</h2>
-															<ul class="default">
+															<ul class="default" data-cy="ingredientsSpice">
 																<li>{{name_spice}}</li>
 
 															</ul>
@@ -28,7 +28,7 @@
 													</div>
 
 													<!-- Content -->
-													<div id="content" class="8u skel-cell-important" name="recipeText">
+													<div id="content" class="8u skel-cell-important" data-cy="recipeText">
 														<section class="section1">
 																<h2>Your recipe</h2>
 																<span class="byline">{{message}}</span>

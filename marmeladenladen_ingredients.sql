@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Erstellungszeit: 28. Mai 2019 um 14:39
--- Server-Version: 10.1.40-MariaDB
--- PHP-Version: 7.3.5
+-- Host: localhost
+-- Generation Time: Jul 07, 2019 at 05:47 PM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `marmelade`
+-- Database: `marmelade`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `marmeladenladen_ingredients`
+-- Table structure for table `marmeladenladen_ingredients`
 --
 
 CREATE TABLE `marmeladenladen_ingredients` (
@@ -35,77 +35,74 @@ CREATE TABLE `marmeladenladen_ingredients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Daten für Tabelle `marmeladenladen_ingredients`
+-- Dumping data for table `marmeladenladen_ingredients`
 --
 
 INSERT INTO `marmeladenladen_ingredients` (`id`, `Name`, `Type`) VALUES
-(1, 'Banana', 'Fruit'),
-(2, 'Blueberry', 'Fruit'),
-(3, 'Strawberry', 'Fruit'),
-(4, 'Rasberry', 'Fruit'),
-(5, 'Apple', 'Fruit'),
-(6, 'Cherry', 'Fruit'),
-(7, 'Peach', 'Fruit'),
-(8, 'Nectarine', 'Fruit'),
-(9, 'Orange', 'Fruit'),
-(10, 'Lemon', 'Fruit'),
+(1, 'Bananas', 'Fruit'),
+(2, 'Blueberries', 'Fruit'),
+(3, 'Strawberries', 'Fruit'),
+(4, 'Raspberries', 'Fruit'),
+(5, 'Apples', 'Fruit'),
+(6, 'Cherries', 'Fruit'),
+(7, 'Peaches', 'Fruit'),
+(8, 'Nectarines', 'Fruit'),
+(9, 'Oranges', 'Fruit'),
+(10, 'Lemons', 'Fruit'),
 (11, 'Grapefruit', 'Fruit'),
-(12, 'Lime', 'Fruit'),
-(13, 'Mango', 'Fruit'),
-(14, 'Blackberry', 'Fruit'),
-(15, 'Johannes berry', 'Fruit'),
-(16, 'Pear', 'Fruit'),
-(17, 'Apricot', 'Fruit'),
-(18, 'Plum', 'Fruit'),
-(19, 'Date', 'Fruit'),
-(20, 'Guava', 'Fruit'),
-(21, 'Black current', 'Fruit'),
-(22, 'Red current', 'Fruit'),
-(23, 'Cranberry', 'Fruit'),
-(24, 'Goose berry', 'Fruit'),
-(25, 'Grape', 'Fruit'),
-(26, 'Mint', 'Spice'),
-(27, 'Peper', 'Spice'),
-(28, 'Salt', 'Spice'),
-(29, 'Basil', 'Spice'),
-(30, 'Ginger', 'Spice'),
-(31, 'Lemon zest', 'Spice'),
-(32, 'Lime zest', 'Spice'),
-(33, 'Lemon juice', 'Spice'),
-(34, 'Lime juice', 'Spice'),
-(35, 'Orangezest', 'Spice'),
-(36, 'Orange juice', 'Spice'),
-(37, 'Cocoa', 'Spice'),
-(38, 'Cocoanut flakes', 'Spice'),
-(39, 'Chilli flakes', 'Spice'),
-(40, 'Nutmeg', 'Spice'),
-(41, 'Maplesirup', 'Spice'),
-(42, 'Honey', 'Spice'),
+(12, 'Limes', 'Fruit'),
+(13, 'Mangos', 'Fruit'),
+(14, 'Blackberries', 'Fruit'),
+(15, 'Johannes berries', 'Fruit'),
+(16, 'Pears', 'Fruit'),
+(17, 'Apricots', 'Fruit'),
+(18, 'Plums', 'Fruit'),
+(19, 'Dates', 'Fruit'),
+(20, 'Papayas', 'Fruit'),
+(21, 'Figs', 'Fruit'),
+(22, 'Red currents', 'Fruit'),
+(23, 'Cranberries', 'Fruit'),
+(24, 'Gooseberries', 'Fruit'),
+(25, 'Grapes', 'Fruit'),
+(26, 'Kiwis', 'Fruit'),
+(27, 'Passionfruit', 'Fruit'),
+(28, 'Rhubarb', 'Fruit'),
+(35, 'Mint', 'Spice'),
+(36, 'Pepper', 'Spice'),
+(37, 'Aniseed', 'Spice'),
+(38, 'Basil', 'Spice'),
+(39, 'Ginger', 'Spice'),
+(40, 'Honey', 'Spice'),
+(41, 'Lemon Zest', 'Spice'),
+(42, 'Agave nectar', 'Spice'),
 (43, 'Cinnamon', 'Spice'),
-(44, 'Vanilla', 'Spice'),
-(45, 'Aniseed', 'Spice'),
-(46, 'Cloves', 'Spice'),
-(47, 'Garlic', 'Spice');
+(44, 'Cloves', 'Spice'),
+(45, 'Garlic', 'Spice'),
+(46, 'Cocoa', 'Spice'),
+(47, 'Coconut Flakes', 'Spice'),
+(48, 'Chili Flakes', 'Spice'),
+(49, 'Rosemary', 'Spice'),
+(50, 'Vanilla', 'Spice');
 
 --
--- Indizes der exportierten Tabellen
+-- Indexes for dumped tables
 --
 
 --
--- Indizes für die Tabelle `marmeladenladen_ingredients`
+-- Indexes for table `marmeladenladen_ingredients`
 --
 ALTER TABLE `marmeladenladen_ingredients`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT für exportierte Tabellen
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT für Tabelle `marmeladenladen_ingredients`
+-- AUTO_INCREMENT for table `marmeladenladen_ingredients`
 --
 ALTER TABLE `marmeladenladen_ingredients`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
