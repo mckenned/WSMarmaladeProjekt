@@ -24,6 +24,16 @@
 		/* width: (containers) */
 		width: 1200px;
 	}
+	.container1 {
+		margin-left: auto;
+		margin-right: auto;
+
+		/* width: (containers) */
+		width: 1400px;
+		background-image: url('../images/Dunk_Holzbrett.jpeg');
+		background-size: 1400px;
+		height: 800px
+	}
 
 	/* Modifiers */
 

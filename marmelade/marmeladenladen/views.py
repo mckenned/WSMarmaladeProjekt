@@ -103,9 +103,6 @@ URL:    ''
 def index(request):
     return render(request, 'Frontpage.html')
 
-
-
-
 '''
 Testing the template and static files
 URL:    '/test/'
@@ -113,3 +110,10 @@ URL:    '/test/'
 
 def fruitbasket(request):
     return render(request, 'index.html')
+
+'''
+Shows the SIte Notices
+URL:    '/sitenotice/'
+'''
+def sitenotice(request):
+    return render(request, 'SiteNotice.html')
