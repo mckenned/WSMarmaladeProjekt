@@ -11,7 +11,7 @@ class TestMarmelade(TestCase):
 	myInput3=['1','2','3'] #banana, blueberry, strawberry
 	myInput4=['1','2','3', '4']
 	myInput5=['1','2','3', '4','5']
-	myInputSpice=['50'] #maple sirup
+	myInputSpice=['50'] #vanilla
 	'''
 		Get the queryset from database based on the id's contained 
 		in the list passed as an argument. For lists of length greater than,
@@ -57,23 +57,23 @@ class TestMarmelade(TestCase):
 	def testPrepareFruits1Fruit(self):
 		queryset = prepare_queryset(self.myInput1)
 		fruits = prepare_fruits(queryset, self.myInput1)
-		self.assertEqual(fruits['name_fruit1'], 'banana')
+		self.assertEqual(fruits['name_fruit1'], 'bananas')
 		self.assertEqual(fruits['name_fruit2'], 'cherries')
 		self.assertEqual(fruits['name_fruit3'], 'raspberries')
 
 	def testPrepareFruits2Fruit(self):
 		queryset = prepare_queryset(self.myInput2)
 		fruits = prepare_fruits(queryset, self.myInput2)
-		self.assertEqual(fruits['name_fruit1'], 'banana')
-		self.assertEqual(fruits['name_fruit2'], 'blueberry')
+		self.assertEqual(fruits['name_fruit1'], 'bananas')
+		self.assertEqual(fruits['name_fruit2'], 'blueberries')
 		self.assertEqual(fruits['name_fruit3'], 'cherries')
 	
 	def testPrepareFruits3Fruit(self):
 		queryset = prepare_queryset(self.myInput3)
 		fruits = prepare_fruits(queryset, self.myInput3)
-		self.assertEqual(fruits['name_fruit1'], 'banana')
-		self.assertEqual(fruits['name_fruit2'], 'blueberry')
-		self.assertEqual(fruits['name_fruit3'], 'strawberry')
+		self.assertEqual(fruits['name_fruit1'], 'bananas')
+		self.assertEqual(fruits['name_fruit2'], 'blueberries')
+		self.assertEqual(fruits['name_fruit3'], 'strawberries')
 
 	'''
 		Testing the method prepare_spices. If a spice is defined, save as String in name_spice
@@ -82,7 +82,7 @@ class TestMarmelade(TestCase):
 	def testPrepareSpicesWithSpice(self):
 		queryset = prepare_queryset(self.myInputSpice)
 		name_spice = prepare_spices(queryset)
-		self.assertEqual('maple sirup',name_spice)
+		self.assertEqual('vanilla',name_spice)
 
 	def testPrepareSpicesWithoutSpice(self):
 		queryset = prepare_queryset(self.myInput5)
